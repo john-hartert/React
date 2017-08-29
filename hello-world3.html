@@ -22,10 +22,12 @@
     //     "142"
     //   )
     // );
-    const Readout = props => (
+    const formatUnits = units => units.toUpperCase();
+
+    const Readout = ({temperature, unit}) => (
             <div>
                 <span>
-                    { props.temperature } { props.unit.toUpperCase() }
+                    { temperature } { formatUnits(unit) }
                 </span>
             </div>
         );
@@ -46,6 +48,7 @@ Use capital letters with Components in react.
 Things that look like HTML elements are Props in react.
 React components should only return one thing.
 Props is always a single argument.
+Inside the curly braces any js is fine.
 -->
 
 
