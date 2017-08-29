@@ -31,20 +31,27 @@
                 </span>
             </div>
         );
+    const incRand = (num) => num + (Math.floor(Math.random() * (maximum - minimum + 1)) + minimum);
 
     // ReactDOM.render(
     //   <Readout temperature="178" unit="f" />,
     //   document.getElementById('root')
     // );
 
-    let currentTemp = 50;
+    let currentTemps = [50, 50, 50, 50, 50];
 
     setInterval(() => {
         ReactDOM.render(
-      <Readout temperature={currentTemp} unit="f" />,
+        (<div>
+      <Readout temperature={currentTemps[0]} unit="f" />
+      <Readout temperature={currentTemps[1]} unit="f" />
+      <Readout temperature={currentTemps[2]} unit="f" />
+      <Readout temperature={currentTemps[3]} unit="f" />
+      <Readout temperature={currentTemps[4]} unit="f" />
+      </div>),
       document.getElementById('root')
     );
-    currentTemp = currentTemp + 5;
+    currentTemps = currentTemps.map(incRand);
     }, 2000);
     
 
