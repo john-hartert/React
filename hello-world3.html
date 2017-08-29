@@ -22,15 +22,13 @@
     //     "142"
     //   )
     // );
-    const Readout = (props) => {
-        return (
+    const Readout = (props) => (
             <div>
                 <span>
                     { props.temperature } { props.unit }
                 </span>
             </div>
         );
-    }
 
     ReactDOM.render(
       <Readout temperature="178" unit="F" />,
@@ -46,7 +44,7 @@ React components are functions.
 Use parenthesis to control white space. 
 Use capital letters with Components in react.
 Things that look like HTML elements are Props in react.
-
+React components should only return one thing.
 
 -->
 
