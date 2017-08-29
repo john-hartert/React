@@ -25,13 +25,13 @@
     const Readout = props => (
             <div>
                 <span>
-                    { props.temperature } { props.unit }
+                    { props.temperature } { props.unit.toUpperCase() }
                 </span>
             </div>
         );
 
     ReactDOM.render(
-      <Readout temperature="178" unit="F" />,
+      <Readout temperature="178" unit="f" />,
       document.getElementById('root')
     );
   </script>
@@ -45,7 +45,7 @@ Use parenthesis to control white space.
 Use capital letters with Components in react.
 Things that look like HTML elements are Props in react.
 React components should only return one thing.
-
+Props is always a single argument.
 -->
 
 
