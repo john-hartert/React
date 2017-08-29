@@ -32,10 +32,25 @@
             </div>
         );
 
-    ReactDOM.render(
-      <Readout temperature="178" unit="f" />,
+    // ReactDOM.render(
+    //   <Readout temperature="178" unit="f" />,
+    //   document.getElementById('root')
+    // );
+
+    let currentTemp = 50;
+
+    setInterval(() => {
+        ReactDOM.render(
+      <Readout temperature={currentTemp} unit="f" />,
       document.getElementById('root')
     );
+    currentTemp = currentTemp + 5;
+    }, 2000);
+    
+
+
+
+
   </script>
 </body>
 </html>
